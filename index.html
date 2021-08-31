@@ -13,7 +13,10 @@
     const img = document.querySelector('img');
     fetch('https://api.giphy.com/v1/gifs/translate?api_key=7FddFo9ujYHVGiLO4CG3l5wlUF5NUM29&s=cats', {mode: 'cors'})
     .then(function(response) {
-      console.log(response.json());
+      return response.json();
+    })
+    .then(function(response) {
+      console.log(response);
     });
   </script>
 </body>
